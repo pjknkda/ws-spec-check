@@ -1,0 +1,32 @@
+{
+  "options": {
+    "failByDrop": false
+  },
+
+  "outdir": "./reports/fuzzingclient",
+
+  "servers": [{
+      "agent": "websockets-3.3",
+      "url": "ws://localhost:8643"
+    },
+    {
+      "agent": "aiohttp-2.1.0",
+      "url": "ws://localhost:8644"
+    }, {
+      "agent": "aiohttp-2.1.0 + uvloop-0.8.0",
+      "url": "ws://localhost:8645"
+    }, {
+      "agent": "tornado-4.5.1",
+      "url": "ws://localhost:8646"
+    }
+  ],
+
+  "cases": ["*"],
+
+  "exclude-cases": [
+    "12.*",
+    "13.*"
+  ],
+
+  "exclude-agent-cases": {}
+}
