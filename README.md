@@ -1,5 +1,7 @@
 # ws-spec-check
-Websocket specification checker for based on autobahn-testsuite.
+Websocket specification checker based on autobahn-testsuite.
+
+Target libraries:
 
 - aiohttp (2.1.0)
 - aiohttp (2.1.0) + uvloop (0.8.0)
