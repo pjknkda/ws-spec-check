@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send text message message with payload of length 8 * 2**20 (8M).",
    "droppedByMe": false,
-   "duration": 1773,
+   "duration": 1699,
    "expectation": "Receive echo'ed text message (with payload as sent).",
    "expected": {},
    "expectedClose": {
@@ -19,8 +19,8 @@
       "requireClean": true
    },
    "failedByMe": false,
-   "httpRequest": "GET / HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.7.6-0.10.9\r\nHost: localhost:8643\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: RQ/EZeu4aI7ZE8Zf+Yd1IQ==\r\nSec-WebSocket-Version: 13\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: Python/3.5 websockets/3.3\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: RVRkyQBRuAp9Glcg3nh1Y47Lxmo=\r\n\r\n",
+   "httpRequest": "GET / HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.7.6-0.10.9\r\nHost: localhost:8643\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: JpgaId2lxWBp4NUijor8Hg==\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: Python/3.5 websockets/3.3\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: kBH83pRwFZ8U6dW9RZ9brp2BQ50=\r\n\r\n",
    "id": "9.1.5",
    "isServer": false,
    "localCloseCode": 1000,
@@ -39,12 +39,11 @@
    "rxOctetStats": {
       "4": 1,
       "164": 1,
-      "24714": 1,
+      "20746": 1,
       "44800": 1,
-      "61568": 1,
-      "65536": 126
+      "65536": 127
    },
-   "started": "2017-06-06T10:11:14.963Z",
+   "started": "2017-06-06T17:34:41.156Z",
    "trafficStats": null,
    "txFrameStats": {
       "1": 1,
@@ -89,7 +88,7 @@
          8,
          true,
          0,
-         "a15e0721",
+         "9ecc4535",
          null,
          null,
          false
@@ -98,7 +97,7 @@
          "TO",
          [
             8,
-            "8882a15e0721a2b6"
+            "88829ecc45359d24"
          ],
          false
       ],

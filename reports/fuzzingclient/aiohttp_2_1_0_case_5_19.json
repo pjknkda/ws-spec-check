@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "A fragmented text message is sent in multiple frames. After\n   sending the first 2 frames of the text message, a Ping is sent. Then we wait 1s,\n   then we send 2 more text fragments, another Ping and then the final text fragment.\n   Everything is legal.",
    "droppedByMe": false,
-   "duration": 1005,
+   "duration": 2,
    "expectation": "The peer immediately answers the first Ping before\n   it has received the last text message fragment. The peer pong's back the Ping's\n   payload exactly, and echo's the payload of the fragmented message back to us.",
    "expected": {
       "OK": [
@@ -35,18 +35,13 @@
       "requireClean": true
    },
    "failedByMe": false,
-   "httpRequest": "GET / HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.7.6-0.10.9\r\nHost: localhost:8644\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: cRNkknWPKn2Rth45RfKZag==\r\nSec-WebSocket-Version: 13\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nUpgrade: websocket\r\nConnection: upgrade\r\nSec-Websocket-Accept: P2pnZQ5LlZjQbhFRVULWpf8YEVI=\r\nTransfer-Encoding: chunked\r\nContent-Type: application/octet-stream\r\nDate: Tue, 06 Jun 2017 10:11:37 GMT\r\nServer: Python/3.5 aiohttp/2.1.0\r\n\r\n",
+   "httpRequest": "GET / HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.7.6-0.10.9\r\nHost: localhost:8644\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: HBkwY8JFZOyjOYOtshaQzQ==\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nUpgrade: websocket\r\nConnection: upgrade\r\nSec-Websocket-Accept: Soks+zGcH0fHhFfB8dhLhAUm2DY=\r\nTransfer-Encoding: chunked\r\nContent-Type: application/octet-stream\r\nDate: Tue, 06 Jun 2017 16:59:36 GMT\r\nServer: Python/3.5 aiohttp/2.1.0\r\n\r\n",
    "id": "5.19",
    "isServer": false,
    "localCloseCode": 1000,
    "localCloseReason": null,
-   "received": [
-      [
-         "pong",
-         "pongme 1!"
-      ]
-   ],
+   "received": [],
    "remoteCloseCode": 1002,
    "remoteCloseReason": null,
    "reportCompressionRatio": false,
@@ -54,25 +49,23 @@
    "result": "Actual events differ from any expected.",
    "resultClose": "The connection was failed by the wrong endpoint",
    "rxFrameStats": {
-      "8": 1,
-      "10": 1
+      "8": 1
    },
    "rxOctetStats": {
       "4": 1,
-      "11": 1,
       "268": 1
    },
-   "started": "2017-06-06T10:12:12.491Z",
+   "started": "2017-06-06T17:00:02.606Z",
    "trafficStats": null,
    "txFrameStats": {
-      "0": 4,
+      "0": 1,
       "1": 1,
       "8": 1,
-      "9": 2
+      "9": 1
    },
    "txOctetStats": {
       "8": 1,
-      "15": 7,
+      "15": 3,
       "240": 1
    },
    "wasClean": true,
@@ -105,7 +98,7 @@
          1,
          false,
          0,
-         "bc354520",
+         "3440f841",
          null,
          null,
          false
@@ -114,7 +107,7 @@
          "TO",
          [
             15,
-            "0189bc354520da472447d1502b548d"
+            "01893440f841523299265925963505"
          ],
          false
       ],
@@ -127,7 +120,7 @@
          0,
          false,
          0,
-         "d2e0e7db",
+         "e5ecad49",
          null,
          null,
          false
@@ -136,7 +129,7 @@
          "TO",
          [
             15,
-            "0089d2e0e7dbb49286bcbf8589afe0"
+            "0089e5ecad49839ecc2e8889c33dd7"
          ],
          false
       ],
@@ -149,7 +142,7 @@
          9,
          true,
          0,
-         "9892468c",
+         "0fe1fe00",
          null,
          null,
          false
@@ -158,7 +151,7 @@
          "TO",
          [
             15,
-            "89899892468ce8fd28ebf5f766bdb9"
+            "89890fe1fe007f8e90676284de312e"
          ],
          false
       ],
@@ -166,121 +159,6 @@
          "CT",
          1,
          null
-      ],
-      [
-         "RO",
-         [
-            11,
-            "8a09706f6e676d65203121"
-         ]
-      ],
-      [
-         "RF",
-         [
-            9,
-            "pongme 1!"
-         ],
-         10,
-         true,
-         0,
-         false,
-         null
-      ],
-      [
-         "CTE",
-         null
-      ],
-      [
-         "TF",
-         [
-            9,
-            "fragment3"
-         ],
-         0,
-         false,
-         0,
-         "31d001b2",
-         null,
-         null,
-         false
-      ],
-      [
-         "TO",
-         [
-            15,
-            "008931d001b257a260d55cb56fc602"
-         ],
-         false
-      ],
-      [
-         "TF",
-         [
-            9,
-            "fragment4"
-         ],
-         0,
-         false,
-         0,
-         "c850eaec",
-         null,
-         null,
-         false
-      ],
-      [
-         "TO",
-         [
-            15,
-            "0089c850eaecae228b8ba5358498fc"
-         ],
-         false
-      ],
-      [
-         "TF",
-         [
-            9,
-            "pongme 2!"
-         ],
-         9,
-         true,
-         0,
-         "18dee9c9",
-         null,
-         null,
-         false
-      ],
-      [
-         "TO",
-         [
-            15,
-            "898918dee9c968b187ae75bbc9fb39"
-         ],
-         false
-      ],
-      [
-         "TF",
-         [
-            9,
-            "fragment5"
-         ],
-         0,
-         true,
-         0,
-         "9d08299b",
-         null,
-         null,
-         false
-      ],
-      [
-         "TO",
-         [
-            15,
-            "80899d08299bfb7a48fcf06d47efa8"
-         ],
-         false
-      ],
-      [
-         "TI",
-         1
       ],
       [
          "RO",
@@ -310,7 +188,7 @@
          8,
          true,
          0,
-         "886ebfe0",
+         "49b1df81",
          null,
          null,
          false
@@ -319,7 +197,7 @@
          "TO",
          [
             8,
-            "8882886ebfe08b86"
+            "888249b1df814a59"
          ],
          false
       ]

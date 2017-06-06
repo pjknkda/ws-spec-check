@@ -10,10 +10,11 @@
       "url": "ws://localhost:8643"
     },
     {
-      "agent": "aiohttp-2.1.0",
+      "agent": "aiohttp-2.1.0-dev",
       "url": "ws://localhost:8644"
-    }, {
-      "agent": "aiohttp-2.1.0 + uvloop-0.8.0",
+    },
+    {
+      "agent": "aiohttp-2.1.0-dev + uvloop-0.8.0",
       "url": "ws://localhost:8645"
     }, {
       "agent": "tornado-4.5.1",

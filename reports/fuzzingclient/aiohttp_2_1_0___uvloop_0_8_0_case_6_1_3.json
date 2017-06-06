@@ -1,14 +1,14 @@
 {
    "agent": "aiohttp-2.1.0 + uvloop-0.8.0",
-   "behavior": "OK",
-   "behaviorClose": "OK",
+   "behavior": "FAILED",
+   "behaviorClose": "FAILED",
    "case": 67,
-   "closedByMe": true,
+   "closedByMe": false,
    "createStats": true,
    "createWirelog": true,
    "description": "Send fragmented text message, 3 fragments, first and last of length 0, middle non-empty.",
    "droppedByMe": false,
-   "duration": 2,
+   "duration": 1,
    "expectation": "A message is echo'ed back to us (with payload = payload of middle fragment).",
    "expected": {
       "OK": [
@@ -27,35 +27,27 @@
       "requireClean": true
    },
    "failedByMe": false,
-   "httpRequest": "GET / HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.7.6-0.10.9\r\nHost: localhost:8645\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: 1kUhUKkvXwWTcBlDVuPKpA==\r\nSec-WebSocket-Version: 13\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nUpgrade: websocket\r\nConnection: upgrade\r\nSec-Websocket-Accept: lQ1kpjlhN0SACNqHNcWmYcmgEN0=\r\nTransfer-Encoding: chunked\r\nContent-Type: application/octet-stream\r\nDate: Tue, 06 Jun 2017 10:12:01 GMT\r\nServer: Python/3.5 aiohttp/2.1.0\r\n\r\n",
+   "httpRequest": "GET / HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.7.6-0.10.9\r\nHost: localhost:8645\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: flFwlYfeaP14rJhpnp0SSw==\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nUpgrade: websocket\r\nConnection: upgrade\r\nSec-Websocket-Accept: sfXrlBNxs3kttCfIjNoTRvDXi8o=\r\nTransfer-Encoding: chunked\r\nContent-Type: application/octet-stream\r\nDate: Tue, 06 Jun 2017 16:59:45 GMT\r\nServer: Python/3.5 aiohttp/2.1.0\r\n\r\n",
    "id": "6.1.3",
    "isServer": false,
    "localCloseCode": 1000,
    "localCloseReason": null,
-   "received": [
-      [
-         "message",
-         "middle frame payload",
-         false
-      ]
-   ],
-   "remoteCloseCode": 1000,
+   "received": [],
+   "remoteCloseCode": 1002,
    "remoteCloseReason": null,
    "reportCompressionRatio": false,
    "reportTime": false,
-   "result": "Actual events match at least one expected.",
-   "resultClose": "Connection was properly closed",
+   "result": "Actual events differ from any expected.",
+   "resultClose": "The connection was failed by the wrong endpoint",
    "rxFrameStats": {
-      "1": 1,
       "8": 1
    },
    "rxOctetStats": {
       "4": 1,
-      "22": 1,
       "268": 1
    },
-   "started": "2017-06-06T10:12:46.516Z",
+   "started": "2017-06-06T17:00:17.327Z",
    "trafficStats": null,
    "txFrameStats": {
       "0": 2,
@@ -98,7 +90,7 @@
          1,
          false,
          0,
-         "fd4ecbde",
+         "7c346d12",
          null,
          null,
          false
@@ -107,7 +99,7 @@
          "TO",
          [
             6,
-            "0180fd4ecbde"
+            "01807c346d12"
          ],
          false
       ],
@@ -120,7 +112,7 @@
          0,
          false,
          0,
-         "a96542b1",
+         "10a533a2",
          null,
          null,
          false
@@ -129,7 +121,7 @@
          "TO",
          [
             26,
-            "0094a96542b1c40c26d5c50062d7db042fd4891523c8c50a23d5"
+            "009410a533a27dcc57c67cc013c462c45ec730d552db7cca52c6"
          ],
          false
       ],
@@ -142,7 +134,7 @@
          0,
          true,
          0,
-         "d35162fe",
+         "e8f44d71",
          null,
          null,
          false
@@ -151,7 +143,7 @@
          "TO",
          [
             6,
-            "8080d35162fe"
+            "8080e8f44d71"
          ],
          false
       ],
@@ -162,17 +154,17 @@
       [
          "RO",
          [
-            22,
-            "81146d6964646c65206672616d65207061796c6f6164"
+            4,
+            "880203ea"
          ]
       ],
       [
          "RF",
          [
-            20,
-            "middle frame payload"
+            2,
+            "0x03ea"
          ],
-         1,
+         8,
          true,
          0,
          false,
@@ -187,7 +179,7 @@
          8,
          true,
          0,
-         "5f76ec90",
+         "b56ff803",
          null,
          null,
          false
@@ -196,28 +188,9 @@
          "TO",
          [
             8,
-            "88825f76ec905c9e"
+            "8882b56ff803b687"
          ],
          false
-      ],
-      [
-         "RO",
-         [
-            4,
-            "880203e8"
-         ]
-      ],
-      [
-         "RF",
-         [
-            2,
-            "0x03e8"
-         ],
-         8,
-         true,
-         0,
-         false,
-         null
       ]
    ]
 }

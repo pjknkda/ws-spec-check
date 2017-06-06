@@ -1,14 +1,14 @@
 {
    "agent": "aiohttp-2.1.0 + uvloop-0.8.0",
-   "behavior": "OK",
-   "behaviorClose": "OK",
+   "behavior": "FAILED",
+   "behaviorClose": "FAILED",
    "case": 66,
-   "closedByMe": true,
+   "closedByMe": false,
    "createStats": true,
    "createWirelog": true,
    "description": "Send fragmented text message, 3 fragments each of length 0.",
    "droppedByMe": false,
-   "duration": 3,
+   "duration": 1,
    "expectation": "A message is echo'ed back to us (with empty payload).",
    "expected": {
       "OK": [
@@ -27,35 +27,27 @@
       "requireClean": true
    },
    "failedByMe": false,
-   "httpRequest": "GET / HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.7.6-0.10.9\r\nHost: localhost:8645\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: LpaXB3lrjW/rsUvt914iSw==\r\nSec-WebSocket-Version: 13\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nUpgrade: websocket\r\nConnection: upgrade\r\nSec-Websocket-Accept: 0r+3en4MTQwf1b7E+2igRKV3VAI=\r\nTransfer-Encoding: chunked\r\nContent-Type: application/octet-stream\r\nDate: Tue, 06 Jun 2017 10:12:01 GMT\r\nServer: Python/3.5 aiohttp/2.1.0\r\n\r\n",
+   "httpRequest": "GET / HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.7.6-0.10.9\r\nHost: localhost:8645\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: K55/II14k1AxgeOaAg4qDQ==\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nUpgrade: websocket\r\nConnection: upgrade\r\nSec-Websocket-Accept: C7StZMuf/9Y0hh8ZCpk7HnGFfLo=\r\nTransfer-Encoding: chunked\r\nContent-Type: application/octet-stream\r\nDate: Tue, 06 Jun 2017 16:59:45 GMT\r\nServer: Python/3.5 aiohttp/2.1.0\r\n\r\n",
    "id": "6.1.2",
    "isServer": false,
    "localCloseCode": 1000,
    "localCloseReason": null,
-   "received": [
-      [
-         "message",
-         "",
-         false
-      ]
-   ],
-   "remoteCloseCode": 1000,
+   "received": [],
+   "remoteCloseCode": 1002,
    "remoteCloseReason": null,
    "reportCompressionRatio": false,
    "reportTime": false,
-   "result": "Actual events match at least one expected.",
-   "resultClose": "Connection was properly closed",
+   "result": "Actual events differ from any expected.",
+   "resultClose": "The connection was failed by the wrong endpoint",
    "rxFrameStats": {
-      "1": 1,
       "8": 1
    },
    "rxOctetStats": {
-      "2": 1,
       "4": 1,
       "268": 1
    },
-   "started": "2017-06-06T10:12:46.510Z",
+   "started": "2017-06-06T17:00:17.324Z",
    "trafficStats": null,
    "txFrameStats": {
       "0": 2,
@@ -97,7 +89,7 @@
          1,
          false,
          0,
-         "2330e8d8",
+         "efe4dcfa",
          null,
          null,
          false
@@ -106,7 +98,7 @@
          "TO",
          [
             6,
-            "01802330e8d8"
+            "0180efe4dcfa"
          ],
          false
       ],
@@ -119,7 +111,7 @@
          0,
          false,
          0,
-         "f669f70e",
+         "e0a8d9fd",
          null,
          null,
          false
@@ -128,7 +120,7 @@
          "TO",
          [
             6,
-            "0080f669f70e"
+            "0080e0a8d9fd"
          ],
          false
       ],
@@ -141,7 +133,7 @@
          0,
          true,
          0,
-         "41bf0ea0",
+         "61425958",
          null,
          null,
          false
@@ -150,7 +142,7 @@
          "TO",
          [
             6,
-            "808041bf0ea0"
+            "808061425958"
          ],
          false
       ],
@@ -161,17 +153,17 @@
       [
          "RO",
          [
-            2,
-            "8100"
+            4,
+            "880203ea"
          ]
       ],
       [
          "RF",
          [
-            0,
-            ""
+            2,
+            "0x03ea"
          ],
-         1,
+         8,
          true,
          0,
          false,
@@ -186,7 +178,7 @@
          8,
          true,
          0,
-         "4e0b3e4e",
+         "dfa178ec",
          null,
          null,
          false
@@ -195,28 +187,9 @@
          "TO",
          [
             8,
-            "88824e0b3e4e4de3"
+            "8882dfa178ecdc49"
          ],
          false
-      ],
-      [
-         "RO",
-         [
-            4,
-            "880203e8"
-         ]
-      ],
-      [
-         "RF",
-         [
-            2,
-            "0x03e8"
-         ],
-         8,
-         true,
-         0,
-         false,
-         null
       ]
    ]
 }

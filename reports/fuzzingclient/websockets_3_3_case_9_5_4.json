@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send text message message with payload of length 1 * 2**20 (1M). Sent out data in chops of 512 octets.",
    "droppedByMe": false,
-   "duration": 275,
+   "duration": 256,
    "expectation": "Receive echo'ed text message (with payload as sent).",
    "expected": {},
    "expectedClose": {
@@ -19,8 +19,8 @@
       "requireClean": true
    },
    "failedByMe": false,
-   "httpRequest": "GET / HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.7.6-0.10.9\r\nHost: localhost:8643\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: YNetvd8z1cLGDCkJgsBgWg==\r\nSec-WebSocket-Version: 13\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: Python/3.5 websockets/3.3\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: vDH6VfF6YTZkLzqlRHVQM+gPTqE=\r\n\r\n",
+   "httpRequest": "GET / HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.7.6-0.10.9\r\nHost: localhost:8643\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: a0h635D/yMlt7Yubd6c/tQ==\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: Python/3.5 websockets/3.3\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: EmE9iEE5J9lLkrt4FuAesSe6Lag=\r\n\r\n",
    "id": "9.5.4",
    "isServer": false,
    "localCloseCode": 1000,
@@ -39,12 +39,11 @@
    "rxOctetStats": {
       "4": 1,
       "164": 1,
-      "2560": 1,
-      "18186": 1,
+      "20746": 1,
       "44800": 1,
       "65536": 15
    },
-   "started": "2017-06-06T10:11:46.279Z",
+   "started": "2017-06-06T17:35:11.866Z",
    "trafficStats": null,
    "txFrameStats": {
       "1": 1,
@@ -90,7 +89,7 @@
          8,
          true,
          0,
-         "58ca8d79",
+         "243d9ecf",
          null,
          null,
          false
@@ -99,7 +98,7 @@
          "TO",
          [
             8,
-            "888258ca8d795b22"
+            "8882243d9ecf27d5"
          ],
          false
       ],

@@ -8,7 +8,7 @@
    "createWirelog": true,
    "description": "Send binary message message with payload of length 65535.",
    "droppedByMe": false,
-   "duration": 18,
+   "duration": 17,
    "expectation": "Receive echo'ed binary message (with payload as sent). Clean close with normal code.",
    "expected": {
       "OK": [
@@ -27,8 +27,8 @@
       "requireClean": true
    },
    "failedByMe": false,
-   "httpRequest": "GET / HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.7.6-0.10.9\r\nHost: localhost:8643\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: Tw2DhaYsRmMJWZ9l+GzD+Q==\r\nSec-WebSocket-Version: 13\r\n\r\n",
-   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: Python/3.5 websockets/3.3\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: RLpzPTukgh04/mzLb1xv/Y1VI3s=\r\n\r\n",
+   "httpRequest": "GET / HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.7.6-0.10.9\r\nHost: localhost:8643\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: pliPCVwWf+e4cC83UbhRzw==\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: Python/3.5 websockets/3.3\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: 5qemR0bhqFwi4O8p+0vWZVZKzcM=\r\n\r\n",
    "id": "1.2.6",
    "isServer": false,
    "localCloseCode": 1000,
@@ -56,7 +56,7 @@
       "164": 1,
       "65536": 1
    },
-   "started": "2017-06-06T10:11:03.979Z",
+   "started": "2017-06-06T17:34:30.274Z",
    "trafficStats": null,
    "txFrameStats": {
       "2": 1,
@@ -97,7 +97,7 @@
          2,
          true,
          0,
-         "c072d23c",
+         "c33d0abd",
          null,
          null,
          false
@@ -106,7 +106,7 @@
          "TO",
          [
             65543,
-            "82feffffc072d23c3e8c2cc23e8c2cc23e8c2cc23e8c2cc23e8c2cc23e8c2cc23e8c2cc23e8c2cc23e8c2cc23e8c2cc23e8c2cc23e8c2cc23e8c2cc23e8c2cc2 ..."
+            "82feffffc33d0abd3dc3f4433dc3f4433dc3f4433dc3f4433dc3f4433dc3f4433dc3f4433dc3f4433dc3f4433dc3f4433dc3f4433dc3f4433dc3f4433dc3f443 ..."
          ],
          false
       ],
@@ -149,7 +149,7 @@
          8,
          true,
          0,
-         "323d9566",
+         "6bf42e9e",
          null,
          null,
          false
@@ -158,7 +158,7 @@
          "TO",
          [
             8,
-            "8882323d956631d5"
+            "88826bf42e9e681c"
          ],
          false
       ],
