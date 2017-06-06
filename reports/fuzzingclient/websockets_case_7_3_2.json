@@ -1,0 +1,120 @@
+{
+   "agent": "websockets",
+   "behavior": "OK",
+   "behaviorClose": "OK",
+   "case": 217,
+   "closedByMe": true,
+   "createStats": true,
+   "createWirelog": true,
+   "description": "Send a close frame with payload length 1",
+   "droppedByMe": false,
+   "duration": 2,
+   "expectation": "Clean close with protocol error or drop TCP.",
+   "expected": {
+      "OK": []
+   },
+   "expectedClose": {
+      "closeCode": [
+         1002
+      ],
+      "closedByMe": true,
+      "requireClean": false
+   },
+   "failedByMe": false,
+   "httpRequest": "GET / HTTP/1.1\r\nUser-Agent: AutobahnTestSuite/0.7.6-0.10.9\r\nHost: localhost:8643\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nSec-WebSocket-Key: YxA+E8EeXOckTUBeE8o2bg==\r\nSec-WebSocket-Version: 13\r\n\r\n",
+   "httpResponse": "HTTP/1.1 101 Switching Protocols\r\nServer: Python/3.5 websockets/3.3\r\nUpgrade: WebSocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: /6yRoDlgj1hOcp3xVIk5qp9X/Jw=\r\n\r\n",
+   "id": "7.3.2",
+   "isServer": false,
+   "localCloseCode": null,
+   "localCloseReason": "a",
+   "received": [],
+   "remoteCloseCode": 1002,
+   "remoteCloseReason": null,
+   "reportCompressionRatio": false,
+   "reportTime": false,
+   "result": "Actual events match at least one expected.",
+   "resultClose": "Connection was properly closed",
+   "rxFrameStats": {
+      "8": 1
+   },
+   "rxOctetStats": {
+      "4": 1,
+      "164": 1
+   },
+   "started": "2017-06-06T09:50:46.440Z",
+   "trafficStats": null,
+   "txFrameStats": {
+      "8": 1
+   },
+   "txOctetStats": {
+      "7": 1,
+      "240": 1
+   },
+   "wasClean": true,
+   "wasCloseHandshakeTimeout": false,
+   "wasNotCleanReason": null,
+   "wasOpenHandshakeTimeout": false,
+   "wasServerConnectionDropTimeout": false,
+   "wirelog": [
+      [
+         "TO",
+         [
+            240,
+            "474554202f20485454502f312e310d0a557365722d4167656e743a204175746f6261686e5465737453756974652f302e372e362d302e31302e390d0a486f7374 ..."
+         ],
+         false
+      ],
+      [
+         "RO",
+         [
+            164,
+            "485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a5365727665723a20507974686f6e2f332e3520776562736f636b6574732f ..."
+         ]
+      ],
+      [
+         "TF",
+         [
+            1,
+            "a"
+         ],
+         8,
+         true,
+         0,
+         "46f4db04",
+         null,
+         null,
+         false
+      ],
+      [
+         "TO",
+         [
+            7,
+            "888146f4db0427"
+         ],
+         false
+      ],
+      [
+         "KL",
+         1
+      ],
+      [
+         "RO",
+         [
+            4,
+            "880203ea"
+         ]
+      ],
+      [
+         "RF",
+         [
+            2,
+            "0x03ea"
+         ],
+         8,
+         true,
+         0,
+         false,
+         null
+      ]
+   ]
+}
